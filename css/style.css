@@ -14,7 +14,7 @@ body {
 
 .main-wrapper {
   font-family:'source sans pro', sans-serif;
-  background-color:#FFF;
+  background-color:#fff;
   min-width:960px;
   min-height:400px;
 }
@@ -64,12 +64,18 @@ nav ul li:hover{
 }
 
 .main p {
-  margin:0 auto;
+  width:100%;
+  text-align:center;
   font-size:50px;
+  line-height:120%;
 }
 
-em {
+.main em {
+  display:block;
+  width:100%;
+  text-align:center;
   font-style:italic;
+  font-weight:700;
 }
 
 /*FOOTER*/
