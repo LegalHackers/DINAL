@@ -7,8 +7,11 @@
 // }
 
 $('#popup_button').click(function() {
-	$('#popup').addClass('fade-out hidden');
+	$('#popup').addClass('fade-out');
+	$('#popup_button').addClass('hidden');
 });
+
+
 
 //auto-scroll
 

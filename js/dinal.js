@@ -1,13 +1,20 @@
 // DINAL Algorithm
 
-var answer1
-var answer2
-var answer3
-var answer4
-var answer5
-var answer6
+var a1 = $('#answer1')
+var a2 = $('#answer2')
+var a3 = $('#answer3')
+var a4 = $('#answer4')
+var a5 = $('#answer5')
+var a6 = $('#answer6')
 
-var finalScore = answer1 + answer2 + answer3 + answer4 + answer5 + answer6
+a1 + a2 + a3 + a4 + a5 + a6 = finalScore
+
+$('#allDone').click(function() {
+	
+	if (finalScore>=30){
+		//pr
+	}
+});
 
 function printFinalScore () {
 	if (finalScore >= 30) {
