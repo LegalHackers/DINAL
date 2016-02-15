@@ -12,13 +12,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="js/jquery-1.12.0.min.js"></script>
 		<div id="popup">
-			<p><b>What this is </b>Do I Need a License? (DINAL?) is a web-based tool that offers quick, free guidance to creative people who want to use someone else's creative work in their own. Based on an algrithm that's currently in development, the program will.</p>
-			<p>DINAL will initially be based on a very small sample: under 40 SCOTUS and 9th Circuit cases. With time, we hope to develop the data, algorithm and design to make the product more sophisticated.</p>
+			<p><b>OKAY</b>We are going to ask you a few questions about the work you want to use and what you want to do with it.</p>
+			<p>After you answer the questions, we will give you a (very) broad recommendation on whether you need a license to use that work</p>
 			<p><b>NOTE THAT IT'S ALWAYS SAFEST TO ASK FOR CONSENT BEFORE KNOWINGLY USING SOMEONE ELSE'S WORK.</b></p>
-			<p id="popup_button" class="slight-fade">Got It</p>
+			<p id="popup_button">Got It</p>
 		</div>
 		</div>
-		<div class="main-wrapper">
+		<div class="main-wrapper clearfix">
 			<header>
 				<div class="logo"><h1>DINAL?</h1></div>
 				<nav>
@@ -29,71 +29,89 @@
 			</header>
 			<div class="main">
 				<p>Welcome to <em>Do I Need a License?</em></p>
-				<h2>Scroll Down to Get Started
-				<span id="arrow">&#8964;</span></h2>
-			</div>
-			<div class="questions">
-				<div id="question1">
-					<h3>1. Does the work you want to use deal with any of the following purposes or types of work?</h3>
-					<form id="answer1">
-						<input type="checkbox" name="prelim" value="govt">a work made by the US federal government<br/>
-						<input type="checkbox" name="prelim" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
-						<input type="checkbox" name="prelim" value="archive">a work you are copying for a non-profit archive or library<br/>
-						<input type="checkbox" name="prelim" value="disabled">a work you are transcribing for the deaf or blind<br/>
-						<input type="checkbox" name="prelim" value="none">none of the above<br/>
-					</form>
+				<h2 id="start">Click Here to Get Started</h2>
+				<div class="questions clearfix">
+					<div class="question1">
+						<h3>First off, certain things can't have copyright</h3>
+						<form id="answer1">
+							<input type="checkbox" id="feds">a work made by the US federal government<br/>
+							<input type="checkbox" id="mereIdea">just an idea or concept<br/>
+							<input type="checkbox" id="archive">a work you are copying for a non-profit archive or library<br/>
+							<input type="checkbox" id="prelim">a work you are transcribing for the deaf or blind<br/>
+							<input type="checkbox" id="prelim">none of the above<br/>
+							<div class="button" id="answer1Button">OK</div>
+						</form>
+					</div>
+					<div class="question2">
+						<h3>2. Why do you want to use the work? (Choose all that apply)</h3>
+						<form id="answer2">
+							<input type="checkbox" name="purpose" value="govt">I'm using a popular work to promote myself or someone else<br/>
+							<input type="checkbox" name="purpose" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
+							<input type="checkbox" name="purpose" value="archive">a work you are copying for a non-profit archive or library<br/>
+							<input type="checkbox" name="purpose" value="disabled">a work you are transcribing for the deaf or blind<br/>
+							<input type="checkbox" name="purpose" value="none">none of the above<br/>
+							<div class="button" id="answer2Back">Go Back</div>
+							<div class="button" id="answer2Button">OK</div>
+						</form>
+					</div>
+					<div class="question3">
+						<h3>How much of the work do you want to use?</h3>
+						<form id="answer3">
+							<input type="checkbox" name="prelim" value="govt">a work made by the US federal government<br/>
+							<input type="checkbox" name="prelim" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
+							<input type="checkbox" name="prelim" value="archive">a work you are copying for a non-profit archive or library<br/>
+							<input type="checkbox" name="prelim" value="disabled">a work you are transcribing for the deaf or blind<br/>
+							<input type="checkbox" name="prelim" value="none">none of the above<br/>
+							<div class="button" id="answer3Back">Go Back</div>
+							<div class="button" id="answer3Button">OK</div>
+						</form>
+					</div>
+					<div class="question4">
+						<h3>How much of the work do you want to use?</h3>
+						<form id="answer4">
+							<input type="checkbox" id="all">most or all of it<br/>
+							<input type="checkbox" id="some" >some of it, but not most<br/>
+							<input type="checkbox" id="alittle-rec">very little but it's recognizable in the whole<br/>
+							<input type="checkbox" id="alittle-notrec">very little and it's not recognizable in the whole<br/>
+							<input type="checkbox" id="none">I'm not copying any of it directly, but I may use concepts from the original work in my own<br/>
+							<div class="button" id="answer4Back">Go Back</div>
+							<div class="button" id="answer4Button">OK</div>
+						</form>
+					</div>
+					<div class="question5">
+						<h3>Will any of the following happen, or has any of the following happened with respect to the ?</h3>
+						<form id="answer5">
+							<input type="checkbox" id="all">most or all of it<br/>
+							<input type="checkbox" id="some" >some of it, but not most<br/>
+							<input type="checkbox" id="alittle-rec">very little but it's recognizable in the whole<br/>
+							<input type="checkbox" id="alittle-notrec">very little and it's not recognizable in the whole<br/>
+							<input type="checkbox" id="none">I'm not copying any of it directly, but I may use concepts from the original work in my own<br/>
+							<div class="button" id="answer5Back">Go Back</div>
+							<div class="button" id="answer5Button">OK</div>
+						</form>
+					</div>
+					<div class="question6">
+						<h3>Are you doing any of the following with your work?</h3>
+						<form id="answer6">
+							<input type="checkbox" id="disclaimer">adding a disclaimer that you're not associated with original work<br/>
+							<input type="checkbox" id="reference">adding an attribution to the original author<br/>
+						</form>
+						<div class="button" id="answer6Back">Go Back</div>
+						<div class="button" id="allDone">
+						All Done!
+						</div>
+					</div>
 				</div>
-				<div class="question2">
-					<h3>2. Why do you want to use the work? (Choose all that apply)</h3>
-					<form id="answer2">
-						<input type="checkbox" name="purpose" value="govt">I'm using a popular work to promote myself or someone else<br/>
-						<input type="checkbox" name="purpose" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
-						<input type="checkbox" name="purpose" value="archive">a work you are copying for a non-profit archive or library<br/>
-						<input type="checkbox" name="purpose" value="disabled">a work you are transcribing for the deaf or blind<br/>
-						<input type="checkbox" name="purpose" value="none">none of the above<br/>
-					</form>
-				</div>
-				<div class="question3">
-					<h3>How much of the work do you want to use?</h3>
-					<form id="answer3">
-						<input type="checkbox" name="prelim" value="govt">a work made by the US federal government<br/>
-						<input type="checkbox" name="prelim" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
-						<input type="checkbox" name="prelim" value="archive">a work you are copying for a non-profit archive or library<br/>
-						<input type="checkbox" name="prelim" value="disabled">a work you are transcribing for the deaf or blind<br/>
-						<input type="checkbox" name="prelim" value="none">none of the above<br/>
-					</form>
-				</div>
-				<div class="question4">
-					<h3>How much of the work do you want to use?</h3>
-					<form id="answer4">
-						<input type="checkbox" id="all">most or all of it<br/>
-						<input type="checkbox" id="some" >some of it, but not most<br/>
-						<input type="checkbox" id="alittle-rec">very little but it's recognizable in the whole<br/>
-						<input type="checkbox" id="alittle-notrec">very little and it's not recognizable in the whole<br/>
-						<input type="checkbox" id="none">I'm not copying any of it directly, but I may use concepts from the original work in my own<br/>
-					</form>
-				</div>
-				<div class="question5">
-					<h3>Will any of the following happen, or has any of the following happened with respect to the ?</h3>
-					<form id="answer5">
-						<input type="checkbox" id="all">most or all of it<br/>
-						<input type="checkbox" id="some" >some of it, but not most<br/>
-						<input type="checkbox" id="alittle-rec">very little but it's recognizable in the whole<br/>
-						<input type="checkbox" id="alittle-notrec">very little and it's not recognizable in the whole<br/>
-						<input type="checkbox" id="none">I'm not copying any of it directly, but I may use concepts from the original work in my own<br/>
-					</form>
-				</div>
-				<div class="question6">
-					<h3>Are you doing any of the following with your work?</h3>
-					<form id="answer6">
-						<input type="checkbox" id="disclaimer">adding a disclaimer that you're not associated with original work<br/>
-						<input type="checkbox" id="reference">adding an attribution to the original author<br/>
-					</form>
-				</div>
+				<aside class="help">
+					<ul>
+						<li class="hidden" id="mereIdea_help">Sample help text</li>
+						<li class="hidden" id="archive_help">Sample help text</li>
+					</ul>
+				</aside>
 			</div>
 			<footer>
-				<div class="button" id="allDone">
-					All Done!
+				<div id="result">
+					0
 				</div>
 			</footer>
 		</div>
