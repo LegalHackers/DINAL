@@ -8,13 +8,13 @@
 
 $(document).ready(function() {
 
-	$('#popup_button').click(function() {
-		$('#popup').fadeOut(500);
-	});
-
 	// HELP TEXT
 
-	$('#mereIdea').click(function() {
+	$('#only').hover(function() {
+		$('#only_help').toggle(500);
+	});
+
+	$('#mereIdea').hover(function() {
 		$('#mereIdea_help').toggle(500);
 	});
 
@@ -25,11 +25,16 @@ $(document).ready(function() {
 	//QUESTION PROGRESSION
 
 	$('#start').click(function() {
+		$('#popup').fadeIn(500);
+	});
+
+	$('#popup_button').click(function() {
+		$('#popup').toggle();
 		$('.question1').fadeIn(500);
 	});
 
 	$('#answer1Button').click(function() {
-		$('.question1').toggle(100);
+		$('.question1').toggle();
 		$('.question2').fadeIn(500);
 	});
 
@@ -80,22 +85,41 @@ $(document).ready(function() {
 
 	// CALCULATE
 
-	var finalScore = 0;
+	var answer2;
 
-	$('#allDone').click(function() {
-
-		// $("#answer1").find("checkbox").each(function(){
-	    	if ($('#feds').prop('checked')==true){ 
-	        	finalScore = finalScore + 25;
-	    	}	else {finalScore=finalScore}
-
-	    	$('#result').html(finalScore);
-
-	    	console.log(finalScore)
-
+	$("#answer2Button").click(function() {
+	    answer2=0;
+	    if ($('#self-promotion').prop('checked')==true){ 
+	        answer2 = answer2 - 10;
+	    }	
+	    if ($('#commerce').prop('checked')==true){ 
+	        answer2 = answer2 - 10;
+	    }
+	    if ($('#ads').prop('checked')==true){ 
+	        answer2 = answer2 - 10;
+	    }
+	    if ($('#parody').prop('checked')==true){ 
+	        answer2 = answer2 + 20;
+	    }	
+	    if ($('#newsworthy').prop('checked')==true){ 
+	        answer2 = answer2 + 20;
+	    }	
+	    if ($('#remix').prop('checked')==true){ 
+	        answer2 = answer2 + 25;
+	    }	
+	    if ($('#remaster').prop('checked')==true){ 
+	        answer2 = answer2 - 10;
+	    }	
+	    if ($('#transform').prop('checked')==true){ 
+	        answer2 = answer2 + 15;
+	    }
+	    console.log(answer2);
 	});
 
+
 });
+
+
 
 // QUESTION BUTTONS
 

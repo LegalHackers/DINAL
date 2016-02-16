@@ -11,13 +11,6 @@
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 		<script src="js/jquery-1.12.0.min.js"></script>
-		<div id="popup">
-			<p><b>OKAY</b>We are going to ask you a few questions about the work you want to use and what you want to do with it.</p>
-			<p>After you answer the questions, we will give you a (very) broad recommendation on whether you need a license to use that work</p>
-			<p><b>NOTE THAT IT'S ALWAYS SAFEST TO ASK FOR CONSENT BEFORE KNOWINGLY USING SOMEONE ELSE'S WORK.</b></p>
-			<p id="popup_button">Got It</p>
-		</div>
-		</div>
 		<div class="main-wrapper clearfix">
 			<header>
 				<div class="logo"><h1>DINAL?</h1></div>
@@ -28,37 +21,47 @@
 				</nav>
 			</header>
 			<div class="main">
-				<p>Welcome to <em>Do I Need a License?</em></p>
-				<h2 id="start">Click Here to Get Started</h2>
+				<div id="hero"><p>Welcome to <em>Do I Need a License?</em></p>
+				<h2 id="start">Click Here to Get Started</h2></div>
 				<div class="questions clearfix">
+					<div id="popup">
+						<p>We are going to ask you a few questions about the work you want to use and what you want to do with it. In each question, check all answers that apply.</p>
+						<p>After you answer the questions, we will give you a (very) broad recommendation on whether you need a license to use that work, based on a developing algorithm that considers US copyright law.</p>
+						<p><b>NOTE THAT IT'S ALWAYS SAFEST TO ASK FOR CONSENT BEFORE KNOWINGLY USING SOMEONE ELSE'S WORK.</b></p>
+						<p class="button" id="popup_button">Got It</p>
+					</div>
 					<div class="question1">
-						<h3>First off, certain things can't have copyright</h3>
-						<form id="answer1">
-							<input type="checkbox" id="feds">a work made by the US federal government<br/>
-							<input type="checkbox" id="mereIdea">just an idea or concept<br/>
-							<input type="checkbox" id="archive">a work you are copying for a non-profit archive or library<br/>
-							<input type="checkbox" id="prelim">a work you are transcribing for the deaf or blind<br/>
-							<input type="checkbox" id="prelim">none of the above<br/>
-							<div class="button" id="answer1Button">OK</div>
-						</form>
+						<h3>Before we get started, there are certain things that cannot have US copyright, so they are free to use under US copyright law (<span id="only">only</span>):</h3>
+						<ul>
+							<li>a work made by the US federal government</li>
+							<li>a work in the <span id="public_domain">public domain</span></li>
+							<li>an unwritten idea or concept</li>
+							<li>a work you are copying for a non-profit archive or library</li>
+						</ul>
+						<div class="button" id="answer1Button">OK</div>
 					</div>
 					<div class="question2">
-						<h3>2. Why do you want to use the work? (Choose all that apply)</h3>
+						<h3>Why do you want to use the work? (Choose all that apply)</h3>
 						<form id="answer2">
-							<input type="checkbox" name="purpose" value="govt">I'm using a popular work to promote myself or someone else<br/>
-							<input type="checkbox" name="purpose" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
-							<input type="checkbox" name="purpose" value="archive">a work you are copying for a non-profit archive or library<br/>
-							<input type="checkbox" name="purpose" value="disabled">a work you are transcribing for the deaf or blind<br/>
+							<input type="checkbox" id="self-promotion">I'm using a popular work to promote myself or someone else<br/>
+							<input type="checkbox" id="commerce">I'm being paid to license the work to someone else<br/>
+							<input type="checkbox" id="ads">I'm producing commercial materials<br/>
+							<input type="checkbox" id="parody">I'm creating a parody of the original work or commenting on the original work in some other way<br/>
+							<input type="checkbox" id="newsworthy">I'm documenting an important cultural or historical event<br/>
+							<input type="checkbox" id="remix">I'm remixing the original work<br/>
+							<input type="checkbox" id="remaster">I'm remastering the original work<br/>
+							<input type="checkbox" id="transform">I'm transforming the original work into something completely new<br/>
+							<input id="other" value="Another purpose"><br/>
 							<input type="checkbox" name="purpose" value="none">none of the above<br/>
 							<div class="button" id="answer2Back">Go Back</div>
 							<div class="button" id="answer2Button">OK</div>
 						</form>
 					</div>
 					<div class="question3">
-						<h3>How much of the work do you want to use?</h3>
+						<h3>How much of the work do you actually want to use?</h3>
 						<form id="answer3">
-							<input type="checkbox" name="prelim" value="govt">a work made by the US federal government<br/>
-							<input type="checkbox" name="prelim" value="idea">some elese's idea that hasn't been fixed in a medium<br/>
+							<input type="checkbox" id="all">the entire thing<br/>
+							<input type="checkbox" name="prelim" value="idea">a significant, noticable portion of the whole<br/>
 							<input type="checkbox" name="prelim" value="archive">a work you are copying for a non-profit archive or library<br/>
 							<input type="checkbox" name="prelim" value="disabled">a work you are transcribing for the deaf or blind<br/>
 							<input type="checkbox" name="prelim" value="none">none of the above<br/>
@@ -104,16 +107,12 @@
 				</div>
 				<aside class="help">
 					<ul>
-						<li class="hidden" id="mereIdea_help">Sample help text</li>
+						<li class="hidden" id="only_help">Keep in mind that we are not taking into account: other countries' laws; US patent, trademark, or trade secret law. So we are only talking about creative works covered under <a href="https://www.law.cornell.edu/uscode/text/17/101">17 USC &sect;101</li>
 						<li class="hidden" id="archive_help">Sample help text</li>
+						<li class=""
 					</ul>
 				</aside>
 			</div>
-			<footer>
-				<div id="result">
-					0
-				</div>
-			</footer>
 		</div>
   	<script src="js/index.js"></script>
 	</body>

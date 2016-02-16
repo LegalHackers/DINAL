@@ -76,23 +76,16 @@ b {
 /*POPUP*/
 
 #popup {
-  min-width:400px;
-  margin: 10% 6%;
-  height:auto;
-  padding:40px;
-  border-radius:5px;
-  background-color:rgb(169,170,153);
-  box-shadow: 1.5px 1.5px 5px #000;
-  position:absolute;
-  z-index:1;
-  text-align:justify;
-  font-size:30px;
-  font-weight:300;
   display:none;
 }
 
 #popup p {
+  font-size:28px;
+  font-weight:300;
+  padding:10px;
+  width:auto;
   margin-top:20px;
+  padding:0 40px;
 }
 
 p#popup_button {
@@ -103,7 +96,7 @@ p#popup_button {
   box-sizing:border-box;
   background-color:#ccc;
   text-align:center;
-  margin: 40px auto 0px auto;
+  margin: 40px auto 40px auto;
   border-radius:5px;
   box-shadow:2px 2px 5px #000;
   padding-top:3px;
@@ -212,12 +205,13 @@ nav ul li:hover{
   margin-left:20%;
   height:auto;
   border-radius:5px;
-  background-color:rgba(169,170,153,1);
+  background-color:#303C58;
   box-shadow: 1.5px 1.5px 5px #000;
   margin-bottom:30px;
   position:absolute;
   z-index:1;
   top:80px;
+  color:#fff;
 }
 
 input[type='checkbox'] {
@@ -242,12 +236,23 @@ input[type='checkbox'] {
   font-weight:300;
 }
 
+.questions ul {
+  padding-left: 80px;
+}
+
+.questions ul li {
+  font-size:28px;
+  font-weight:300;
+  list-style: disc;
+  padding-bottom:20px;
+}
+
 .questions input{
 }
 
 .help {
   height:auto;
-  width:auto;
+  width:200px;
   float:right;
 }
 
@@ -298,12 +303,6 @@ footer {
   padding-top:15px;
   color:#000;
   cursor:pointer;
-}
-
-#result {
-  display:block;
-  height:40px;
-  background-color:#fff;
 }
 
 .question1, .question2, .question3, .question4, .question5, .question6 {
