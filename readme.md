@@ -12,3 +12,14 @@ substantive law, court-decision data and user input, DINAL will return one of th
 DINAL will initially be based on a very small sample: under 40 SCOTUS and 9th Circuit cases.  With time, we hope to develop the
 data, algorithm and design to make the product more sophisticated.
 
+This software is licensed under the following terms:
+
+The MIT License (MIT) (c) 2016 Phil Weiss
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The person obtaining a copy of the Software (the "Legal Hacker") must not use the Software in a manner that is illegal or unlawful.
+The Legal Hacker acknowledges that the Software is stored on a free, public repository and therefore acknwoledges that others may also use the Software, without restriction, under the terms of this License.
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
