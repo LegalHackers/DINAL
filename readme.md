@@ -12,6 +12,8 @@ substantive law, court-decision data and user input, DINAL will return one of th
 DINAL will initially be based on a very small sample: under 40 SCOTUS and 9th Circuit cases.  With time, we hope to develop the
 data, algorithm and design to make the product more sophisticated.
 
+THIS PRODUCT IS ABSOLUTELY NOT TESTED OR SCIENTIFIC. THIS IS NOT A GOOD SUBSITUTE FOR LEGAL ADVICE AND CERTAINLY DOESN'T CREATE AN ATTORNEY-CLIENT RELATIONSHIP WITH ME.
+
 This software is licensed under the following terms:
 
 The MIT License (MIT) (c) 2016 Phil Weiss
